@@ -1,3 +1,16 @@
+
+KatoGoldRush
+
+============
+
+
+This game uses the same code management structure as the Xamarin sample project “CocosSharp BouncingGame Project for iOS and Android”. All additional features added are for the game “KatoGoldRush”.
+
+———————
+Team SotaOverride.
+
+Reference
+
 CocosSharp BouncingGame Project for iOS and Android
 ====================================
 
