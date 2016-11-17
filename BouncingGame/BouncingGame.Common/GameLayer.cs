@@ -90,7 +90,7 @@ namespace BouncingGame
 			trackSeg1.PositionX = 344;
 			trackSeg1.PositionY = 1000;
 			AddChild(trackSeg1);
-
+			//check this
 			trackSeg2.PositionX = 384;
 			trackSeg2.PositionY = 1000;
 			AddChild(trackSeg2);
@@ -101,15 +101,6 @@ namespace BouncingGame
 
 			//int width = 768;
 			//int height = 1027;
-
-
-
-			// "paddle" refers to the paddle.png image
-			paddleSprite = new CCSprite ("paddle");
-			paddleSprite.PositionX = 100;
-			paddleSprite.PositionY = 100;
-			AddChild (paddleSprite);
-
 
 			ballSprite = new CCSprite ("train_01");
 			ballSprite.PositionX = 384;
@@ -156,23 +147,33 @@ namespace BouncingGame
 			//Make this for Train  engine to overlap track
 			//bool doesBallOverlapPaddle = ballSprite.BoundingBoxTransformedToParent.IntersectsRect(
 			//	paddleSprite.BoundingBoxTransformedToParent);
-			bool doesBallOverlapPaddle =( ballSprite.BoundingBoxTransformedToParent.IntersectsRect(
+			bool doesTrackOverlapTrain =( ballSprite.BoundingBoxTransformedToParent.IntersectsRect(
 				trackSeg1.BoundingBoxTransformedToParent) || ballSprite.BoundingBoxTransformedToParent.IntersectsRect(
 				trackSeg2.BoundingBoxTransformedToParent) || ballSprite.BoundingBoxTransformedToParent.IntersectsRect(
 				trackSeg3.BoundingBoxTransformedToParent) );
 			// ... and if the ball is moving downward.
 			bool isMovingDownward = ballYVelocity < 0;
-			if (doesBallOverlapPaddle && isMovingDownward)
-			{
-				// First let's invert the velocity:
-				ballYVelocity *= -1;
-				// Then let's assign a random to the ball's x velocity:
-				const float minXVelocity = -300;
-				const float maxXVelocity = 300;
-				ballXVelocity = CCRandom.GetRandomFloat (minXVelocity, maxXVelocity);
-				// New code:
+			/*	if (doesBallOverlapPaddle && isMovingDownward)
+				{
+					// First let's invert the velocity:
+					ballYVelocity *= -1;
+					// Then let's assign a random to the ball's x velocity:
+					const float minXVelocity = -300;
+					const float maxXVelocity = 300;
+					ballXVelocity = CCRandom.GetRandomFloat (minXVelocity, maxXVelocity);
+					// New code:
+					score++;
+					scoreLabel.Text = "Score: " + score;
+				}*/
+
+			if (doesTrackOverlapTrain ){
+				
+				trackSeg1.PositionY = 1000;
+				trackSeg2.PositionY = 1000;
+				trackSeg3.PositionY = 1000;
 				score++;
 				scoreLabel.Text = "Score: " + score;
+				
 			}
 			// First let’s get the ball position:   
 			float ballRight = ballSprite.BoundingBoxTransformedToParent.MaxX;
@@ -220,8 +221,12 @@ namespace BouncingGame
 
 			//Aatir
 			//for track add a for loop here and do it for all of them
+			float tmpDis = trackSeg3.PositionX - trackSeg2.PositionX;
 			var locationOnScreen = touches [0].Location;
-			paddleSprite.PositionX = locationOnScreen.X;
+			trackSeg1.PositionX = locationOnScreen.X-40;
+			trackSeg2.PositionX = locationOnScreen.X ;
+			trackSeg3.PositionX = locationOnScreen.X +40;
+
 		}
 	}
 }
