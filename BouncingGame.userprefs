@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{F573202E-DBA2-4D5C-8DB1-A8D956DB8643}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BouncingGame/BouncingGame.Common/GameLayer.cs">
+    <Files>
+      <File FileName="BouncingGame/BouncingGame.Common/GameLayer.cs" Line="95" Column="30" />
+      <File FileName="BouncingGame/BouncingGame.iOS/AppDelegate.cs" Line="1" Column="1" />
+      <File FileName="BouncingGame/BouncingGame.iOS/Main.cs" Line="1" Column="1" />
+      <File FileName="BouncingGame/BouncingGame.iOS/ViewController.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.BouncingGame.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.53DED0AD-A977-4CC3-A936-95D56F006E7A" />
+</Properties>

@@ -1,0 +1,16 @@
+/Users/aatirmanzur/Downloads/BouncingGame/BouncingGame/BouncingGame.Common/obj/Debug/.NETPortable,Version=v4.5,Profile=Profile111.AssemblyAttribute.cs
+/Users/aatirmanzur/Downloads/BouncingGame/BouncingGame/BouncingGame.Common/bin/Debug/BouncingGame.Common.dll.mdb
+/Users/aatirmanzur/Downloads/BouncingGame/BouncingGame/BouncingGame.Common/bin/Debug/BouncingGame.Common.dll
+/Users/aatirmanzur/Downloads/BouncingGame/BouncingGame/BouncingGame.Common/obj/Debug/BouncingGame.Common.dll
+/Users/aatirmanzur/Downloads/BouncingGame/BouncingGame/BouncingGame.Common/obj/Debug/BouncingGame.Common.dll.mdb
+/Users/aatirmanzur/Downloads/BouncingGame/BouncingGame/BouncingGame.Common/bin/Debug/box2d.dll
+/Users/aatirmanzur/Downloads/BouncingGame/BouncingGame/BouncingGame.Common/bin/Debug/CocosSharp.dll
+/Users/aatirmanzur/Downloads/BouncingGame/BouncingGame/BouncingGame.Common/bin/Debug/MonoGame.Framework.dll
+/Users/aatirmanzur/katogoldrushstack/BouncingGame/BouncingGame.Common/obj/Debug/.NETPortable,Version=v4.5,Profile=Profile111.AssemblyAttribute.cs
+/Users/aatirmanzur/katogoldrushstack/BouncingGame/BouncingGame.Common/bin/Debug/BouncingGame.Common.dll.mdb
+/Users/aatirmanzur/katogoldrushstack/BouncingGame/BouncingGame.Common/bin/Debug/BouncingGame.Common.dll
+/Users/aatirmanzur/katogoldrushstack/BouncingGame/BouncingGame.Common/obj/Debug/BouncingGame.Common.dll
+/Users/aatirmanzur/katogoldrushstack/BouncingGame/BouncingGame.Common/obj/Debug/BouncingGame.Common.dll.mdb
+/Users/aatirmanzur/katogoldrushstack/BouncingGame/BouncingGame.Common/bin/Debug/box2d.dll
+/Users/aatirmanzur/katogoldrushstack/BouncingGame/BouncingGame.Common/bin/Debug/CocosSharp.dll
+/Users/aatirmanzur/katogoldrushstack/BouncingGame/BouncingGame.Common/bin/Debug/MonoGame.Framework.dll
