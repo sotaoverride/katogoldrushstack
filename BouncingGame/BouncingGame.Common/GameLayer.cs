@@ -52,7 +52,6 @@ namespace BouncingGame
 
 	public class GameLayer : CCLayerColor
 	{
-		CCSprite paddleSprite;
 		CCSprite ballSprite;
 		CCLabel scoreLabel;
 		CCSprite trackSeg1;
@@ -64,7 +63,7 @@ namespace BouncingGame
 		float trackSegYVelocity;
 
 		// How much to modify the ball's y velocity per second:
-		const float gravity = 140;
+		const float gravity = 40;
 
 		int score;
 
@@ -119,15 +118,7 @@ namespace BouncingGame
 		void RunGameLogic(float frameTimeInSeconds)
 		{
 
-			//Aatir:
-			//Make a new track appear from the array
-			//AddChild (trackSprite[i])
-			//trackMaker = new CCSprite("train_01");
 
-			// This is a linear approximation, so not 100% accurate
-			//Aatir:
-			//Change velocity to zero
-			//ballYVelocity += frameTimeInSeconds * -gravity;
 			ballYVelocity = 0;
 			trackSegYVelocity += frameTimeInSeconds * -gravity;
 			trackSeg1.PositionY += trackSegYVelocity * frameTimeInSeconds;
@@ -139,32 +130,15 @@ namespace BouncingGame
 				trackSeg2.PositionY = 1000;
 				trackSeg3.PositionY = 1000;
 			}
-			//ballSprite.PositionX += ballXVelocity * frameTimeInSeconds;
-			//ballSprite.PositionY += ballYVelocity * frameTimeInSeconds;
-			// New Code:
-			// Check if the two CCSprites overlap...
+
 			//Aatir
 			//Make this for Train  engine to overlap track
-			//bool doesBallOverlapPaddle = ballSprite.BoundingBoxTransformedToParent.IntersectsRect(
-			//	paddleSprite.BoundingBoxTransformedToParent);
+		
 			bool doesTrackOverlapTrain =( ballSprite.BoundingBoxTransformedToParent.IntersectsRect(
 				trackSeg1.BoundingBoxTransformedToParent) || ballSprite.BoundingBoxTransformedToParent.IntersectsRect(
 				trackSeg2.BoundingBoxTransformedToParent) || ballSprite.BoundingBoxTransformedToParent.IntersectsRect(
 				trackSeg3.BoundingBoxTransformedToParent) );
-			// ... and if the ball is moving downward.
-			bool isMovingDownward = ballYVelocity < 0;
-			/*	if (doesBallOverlapPaddle && isMovingDownward)
-				{
-					// First let's invert the velocity:
-					ballYVelocity *= -1;
-					// Then let's assign a random to the ball's x velocity:
-					const float minXVelocity = -300;
-					const float maxXVelocity = 300;
-					ballXVelocity = CCRandom.GetRandomFloat (minXVelocity, maxXVelocity);
-					// New code:
-					score++;
-					scoreLabel.Text = "Score: " + score;
-				}*/
+		
 
 			if (doesTrackOverlapTrain ){
 				
@@ -181,7 +155,8 @@ namespace BouncingGame
 			// Then let’s get the screen edges
 			float screenRight = VisibleBoundsWorldspace.MaxX;
 			float screenLeft = VisibleBoundsWorldspace.MinX;
-
+			/*
+			 * not required for train
 			// Check if the ball is either too far to the right or left:    
 			bool shouldReflectXVelocity = 
 				(ballRight > screenRight && ballXVelocity > 0) ||
@@ -191,6 +166,7 @@ namespace BouncingGame
 			{
 				ballXVelocity *= -1;
 			}
+			*/
 		}
 
 		protected override void AddedToScene ()
@@ -221,7 +197,6 @@ namespace BouncingGame
 
 			//Aatir
 			//for track add a for loop here and do it for all of them
-			float tmpDis = trackSeg3.PositionX - trackSeg2.PositionX;
 			var locationOnScreen = touches [0].Location;
 			trackSeg1.PositionX = locationOnScreen.X-40;
 			trackSeg2.PositionX = locationOnScreen.X ;
